@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h2>Travelling Form</h2>
+    <form class="example-form">
+      
+      <div>
+        <mat-form-field>
+          <mat-select placeholder="Select City" [(ngModel)]="selectedValue" name="data">
+            <mat-option *ngFor="let data of cities" [value]="data.city_name">
+              {{data.city_name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker1" placeholder="Start Date">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker2" placeholder="End Date">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div>
+          <button mat-raised-button>SUBMIT</button>
+      </div>
+      
+    </form>
+</div>
+
